@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Mikko Adrian R. Saquilayan | VA Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif;scroll-behavior:smooth}
+body{background:#eef5ff;color:#222;transition:.4s}
+body.dark{background:#0b1220;color:#eee}
+header{min-height:100vh;background:linear-gradient(135deg,#2563eb,#0f172a);display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px}
+.hero img{width:170px;height:170px;border-radius:50%;border:5px solid #fff;object-fit:cover;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.hero h1{font-size:3rem}.hero p{margin:15px 0}
+.btn{display:inline-block;padding:12px 20px;background:#fff;color:#2563eb;text-decoration:none;border-radius:30px;margin:8px;font-weight:bold}
+nav{position:fixed;top:0;width:100%;background:#111827dd;padding:12px;text-align:center;backdrop-filter:blur(8px)}
+nav a{color:#fff;margin:0 10px;text-decoration:none}
+.toggle{position:fixed;right:20px;bottom:20px;border-radius:50%;width:55px;height:55px}
+section{max-width:1100px;margin:auto;padding:70px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.1);transition:.3s}
+.dark .card{background:#1f2937}
+.card:hover{transform:translateY(-6px)}
+.progress{background:#ddd;height:10px;border-radius:20px}.bar{height:10px;background:#2563eb;border-radius:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.stat{padding:20px;background:#2563eb;color:#fff;border-radius:12px}
+footer{text-align:center;padding:30px;background:#0f172a;color:#fff}
+input,textarea{width:100%;padding:10px;margin:8px 0}
+button{padding:10px 16px}
+.fade{opacity:0;transform:translateY(30px);transition:1s}.show{opacity:1;transform:none}
+</style></head><body>
+<nav><a href=#about>About</a><a href=#skills>Skills</a><a href=#services>Services</a><a href=#experience>Experience</a><a href=#contact>Contact</a></nav>
+<header><div class=hero><img src="mikko1.jpg"><h1>Mikko Adrian R. Saquilayan</h1><p id=typing></p><a class=btn href=resume.pdf download>Download Resume</a></div></header>
+<section class="stats fade"><div class=stat><h2>3+</h2><p>Years Experience</p></div><div class=stat><h2>10+</h2><p>Professional Skills</p></div><div class=stat><h2>Part-Time</h2><p>Availability</p></div><div class=stat><h2>100%</h2><p>Committed</p></div></section>
+<section id=about class=fade><div class=card><h2>About Me</h2><p>Motivated Computer Science student seeking Virtual Assistant opportunities. Experienced in customer service, manufacturing, and freelance delivery with strong organizational, communication, and administrative skills.</p></div></section>
+<section id=skills class=fade><h2>Skills</h2>
+<div class=grid>
+<div class=card>Google Workspace<div class=progress><div class=bar style='width:90%'></div></div></div>
+<div class=card>Microsoft Office<div class=progress><div class=bar style='width:88%'></div></div></div>
+<div class=card>Data Entry<div class=progress><div class=bar style='width:92%'></div></div></div>
+<div class=card>Email Management<div class=progress><div class=bar style='width:85%'></div></div></div>
+<div class=card>Internet Research<div class=progress><div class=bar style='width:86%'></div></div></div>
+<div class=card>Customer Service<div class=progress><div class=bar style='width:90%'></div></div></div></section>
+<section id=services class="grid fade">
+<div class=card><i class="fa fa-keyboard"></i><h3>Data Entry</h3></div>
+<div class=card><i class="fa fa-envelope"></i><h3>Email Management</h3></div>
+<div class=card><i class="fa fa-search"></i><h3>Internet Research</h3></div>
+<div class=card><i class="fa fa-folder"></i><h3>File Organization</h3></div>
+</section>
+<section id=experience class=fade><div class=card><h2>Experience</h2><h3>Foodpanda Rider</h3><p>Oct 2023-Present</p><hr><h3>Kitchen Crew - Jollibee</h3><p>Aug 2023-Oct 2023</p><hr><h3>Production Operator - Danam</h3><p>Dec 2022-May 2023</p></div></section>
+<section id=contact class=fade><div class=card><h2>Contact</h2><form onsubmit="event.preventDefault();alert('Thank you!')"><input placeholder=Name><input placeholder=Email><textarea placeholder=Message></textarea><button>Send</button></form></div></section>
+<footer>©2026 Mikko Adrian R. Saquilayan</footer>
+<button class="toggle" onclick="document.body.classList.toggle('dark')">🌙</button>
+<script>
+const txt="Aspiring Virtual Assistant | Data Entry | Administrative Support";let i=0;setInterval(()=>{if(i<=txt.length)typing.textContent=txt.slice(0,i++)},60);
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})).observe(document.querySelectorAll?document.body:document.body);
+document.querySelectorAll('.fade').forEach(el=>new IntersectionObserver(e=>{if(e[0].isIntersecting)el.classList.add('show')}).observe(el));
+</script></body></html>
